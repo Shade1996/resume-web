@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@lincode/utils": "^1.2.3",
+    "@material-ui/core": "^4.11.3",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^13.1.1",
@@ -19,11 +21,12 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "react-spring": "^9.0.0",
     "tailwindcss": "2.x",
     "typescript": "4.x"
   },
   "scripts": {
-    "start": "run-p watch:css react-scripts:start",
+    "start": "DISABLE_ESLINT_PLUGIN=true run-p watch:css react-scripts:start",
     "build": "run-s build:css react-scripts:build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
