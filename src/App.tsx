@@ -7,11 +7,12 @@ import { Spring } from '@react-spring/core';
 import {ReactComponent as MinusSvg} from './assets/minus.svg'
 import AnimatedText from './components/AnimatedText';
 import { ReactComponent as WechatLogo } from './assets/wechat.svg'
+import meshSrc from './assets/mesh-gradient.png'
 // import './styles/App.css'
 
 const Title:React.FC =({ children }) =>{
 	return(
-		<div className="text-7xl font-extrabold relative z-10" style={{ lineHeight:"2.8rem" }}>
+		<div className="text-7xl font-extrabold relative z-10 lg:text-9xl " style={{ lineHeight:"0.6em" }}>
 			{children}
 		</div>
 	)
@@ -21,7 +22,7 @@ export default function App() {
 	const [setvisiable, visiable] =useOnScreen()
 	const [clicked, setclicked] = useState(false)
 	return (
-		<div className="bg-gray-100">
+		<div className="bg-gray-100 lg:px-72">
 			<div className="h-60" />
 			<div className="text-center font-bold" ref={setvisiable}>
 				<div className="mr-20 text-6xl">
@@ -34,31 +35,45 @@ export default function App() {
 			</div>
 			<div className="mx-4">
 				<Title>Project.</Title>
-				<div className="flex flex-col">
-					<Card background="#e9c3b8"/>
-					<Card background="#224a54" color="white"/>
-					<Card background="#1a1a1a" color="white"/>
+				<div className="flex flex-col lg:grid lg:grid-rows-2 lg:grid-cols-2">
+					<Card background="#e9c3b8" classname="col-span-2 lg:px-80 hover:translate-y-2.5" title="Mobius" onClick={()=>window.location.href="https://shade233.top:4001"}>
+					A smart bike app with map function. You can find your location in this app... And you can see dynamic 3d bike effects and visual tables.
+					</Card>
+					<Card background="#224a54" color="white" title="Lingo Display" classname="hover:-translate-y-2.5" onClick={()=>window.location.href="https://shade233.top:4000"}>
+					A website with canvas elements as background and a micro-interactive pointer... The mouse on the circle will change color.
+					</Card>
+					<Card background="#1a1a1a" color="white" title="react-coding-keyboard"  classname="hover:-translate-y-2.5"onClick={()=>window.location.href="https://github.com/Shade1996/react-coding-keyboard"}>
+					Emmm... A mobile-friendly react code keyboard component
+					</Card>
 				</div>
 			</div>
-			<div className="mt-40 mx-4">
+			<div className="mt-40 mx-4 pb-10 lg:pb-20">
 				<Title>Say hi.</Title>
-				<div className="text-white p-8" style={{backgroundColor:"#1f4954", height:window.innerHeight * 0.85 }}> 
-					<div className="text-4xl font-bold">shadework<br />@outlook.com</div>
-					<div className="w-16 text-white fill-current">
-						<MinusSvg />
+				<div className="text-white p-10 relative" style={{backgroundColor:"#1f4954", height:window.innerHeight * 0.85 }}> 
+					<div className="lg:w-1/2">
+						<a className="text-4xl font-bold block lg:mt-10 lg:text-6xl hover:underline" href="mailto:shadework@outlook.com">shadework@<br />outlook.com</a>
+						<div className="w-16 text-white fill-current my-4">
+							<MinusSvg />
+						</div>
+						<div className="lg:w-1/2">
+							Hello, i am a "quasi-full-stack" engineer with extensive front-end design and development experience, and familiar with linux server operation and deployment. I love to design and make things. <a href="https://twitter.com/Shade_Light_" className="underline">Say hi!</a>
+						</div>
+						<div className="mt-10">
+							Shade Lei<br />
+							Shanghai, China<br />
+							Wechat : Shade-233
+						</div>
+						<div className="flex h-8 space-x-4 mt-10">
+							<a href="https://github.com/Shade1996?tab=repositories" className="h-full w-8">
+								<GithubLogo className="text-white fill-current transition duration-500 hover:text-black transform hover:-translate-y-1 hover:scale-110" title="Github"/>
+							</a>
+							<a href="https://twitter.com/Shade_Light_" className="h-full w-8">
+								<TwitterLogo className="text-white fill-current transition duration-500 hover:text-black transform hover:-translate-y-1 hover:scale-110" title="Twitter"/>
+							</a>
+							<WechatLogo className="text-white fill-current transition duration-500 hover:text-black transform hover:-translate-y-1 hover:scale-110" title="Wechat"/>
+						</div>
 					</div>
-					<div>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi nostrum ut ipsum maxime expedita. Itaque doloribus tempora qui quia? Debitis facilis amet eos itaque distinctio expedita esse cum earum delectus.
-					</div>
-					<div className="mt-10">
-						Shade Lei<br />
-						Shanghai, China
-					</div>
-					<div className="flex h-8 space-x-4 mt-10">
-						<a href="https://github.com/Shade1996?tab=repositories" className="h-full w-8"><GithubLogo className="text-white fill-current transition duration-500 hover:text-black transform hover:-translate-y-1 hover:scale-110" /></a>
-						<TwitterLogo className="text-white fill-current transition duration-500 hover:text-black transform hover:-translate-y-1 hover:scale-110" href="https://twitter.com/Shade_Light_" />
-						<WechatLogo className="text-white fill-current transition duration-500 hover:text-black transform hover:-translate-y-1 hover:scale-110" href="" />
-					</div>
+					<img className="w-1/2 h-full right-0 top-0 absolute hidden lg:block" src={meshSrc} alt="" loading="lazy"/>
 				</div>
 			</div>
 		</div>

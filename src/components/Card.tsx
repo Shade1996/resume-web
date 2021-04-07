@@ -1,23 +1,26 @@
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
 import {ReactComponent as MinusSvg} from '../assets/minus.svg'
 
 const Card:React.FC<{
 	title?:string,
 	background?:string,
-	color?:string
-}> = ({ children, title, background, color }) =>{
+	color?:string,
+	classname?:string,
+	onClick?:MouseEventHandler
+}> = ({ children, title, background, color, classname, onClick }) =>{
 	return(
-		<div className="p-10 bg-blue-500 flex flex-col justify-center items-center text-center" style={{
-		 height:window.innerHeight*0.85,
+		<div className={`p-10 bg-blue-500 flex flex-col justify-center items-center text-center transform transition duration-500 ease-in-out `+ classname} style={{
+		 height:window.innerWidth>1024 ? window.innerHeight*0.65 : window.innerHeight*0.85,
 		 background,
 		 color
-		 }}>
-			 <div className="text-4xl font-bold mb-16">title</div>
+		 }} 
+		 onClick={onClick}>
+			 <div className="text-4xl font-bold mb-16 lg">{title}</div>
 			 <div className="w-16 text-white fill-current">
             <MinusSvg />
 			</div>
-			 <div className="break-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nulla eligendi voluptatibus rem fugit rerum. Porro quidem hic eaque, excepturi enim facere, omnis culpa et autem eligendi, quam labore reiciendis?</div>
-			{children}
+			 <div className="break-normal">{children}</div>
+			
 		</div>
 	)
 }
