@@ -36,13 +36,13 @@ export default function App() {
 			<div className="mx-4">
 				<Title>Project.</Title>
 				<div className="flex flex-col lg:grid lg:grid-rows-2 lg:grid-cols-2">
-					<Card background="#e9c3b8" classname="col-span-2 lg:px-80 hover:translate-y-2.5" title="Mobius" onClick={()=>window.location.href="https://shade233.top:4001"}>
+					<Card background="#e9c3b8" classname="col-span-2 lg:px-80 hover:translate-y-2.5" title="Mobius" onClick={()=>window.open("https://shade233.top:4001","_blank")}>
 					A smart bike app with map function. You can find your location in this app... And you can see dynamic 3d bike effects and visual tables.
 					</Card>
-					<Card background="#224a54" color="white" title="Lingo Display" classname="hover:-translate-y-2.5" onClick={()=>window.location.href="https://shade233.top:4000"}>
+					<Card background="#224a54" color="white" title="Lingo Display" classname="hover:-translate-y-2.5" onClick={()=>window.open("https://shade233.top:4000","_blank")}>
 					A website with canvas elements as background and a micro-interactive pointer... The mouse on the circle will change color.
 					</Card>
-					<Card background="#1a1a1a" color="white" title="react-coding-keyboard"  classname="hover:-translate-y-2.5"onClick={()=>window.location.href="https://github.com/Shade1996/react-coding-keyboard"}>
+					<Card background="#1a1a1a" color="white" title="react-coding-keyboard"  classname="hover:-translate-y-2.5"onClick={()=>window.open("https://github.com/Shade1996/react-coding-keyboard","_blank")}>
 					Emmm... A mobile-friendly react code keyboard component
 					</Card>
 				</div>
