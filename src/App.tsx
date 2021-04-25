@@ -20,8 +20,6 @@ const Title:React.FC =({ children }) =>{
 	)
 }
 
-// let lang = "en"
-
 const messages = {
 	en:{
 		bio:"I create,develop,design",
@@ -53,9 +51,9 @@ export default function App() {
 	return (
 		<IntlProvider messages={messages[lang]} locale={lang} >
 			<div className="bg-gray-100 md:px-36 xl:px-72">
-				<div className="absolute top-0 right-0 mt-4 mr-4 opacity-60" onClick={()=>{
+				<div className="absolute top-0 right-0 mt-4 mr-4 opacity-60 cursor-pointer" onClick={()=>{
 					lang === "en" ? setlang("zh") :setlang("en")}}>
-					{lang === "en" ? <div>CN</div>: <div>EN</div>}
+					{lang === "en" ? "CN": "EN"}
 					</div>
 				<div className="h-60" />
 				<div className="text-center font-bold" ref={setvisiable}>
