@@ -26,7 +26,7 @@ const messages = {
 		card1a:"A smart bike app with map function. You can find your location in this app... ",
 		card1b:"And you can see dynamic 3d bike effects and visual tables.",
 		card2:"A website with canvas elements as background and a micro-interactive pointer... The mouse on the circle will change color.",
-		card3:"A mobile-friendly react code keyboard component.",
+		card3:"A three.js project use react-three-fiber to  build. Click me! 😄",
 		intro:"Hello, i am a \"quasi-full-stack\" engineer with extensive front-end design and development experience, and familiar with linux server operation and deployment. I love to design and make things.",
 		location:"Shanghai, China",
 		wechat:"Wechat : Shade-233"
@@ -36,7 +36,7 @@ const messages = {
 		card1a:"这是一个具有地图功能的智能自行车应用程序。你可以在这个应用程序中找到你的位置...",
 		card1b:"同时,你还可以看到物理模拟动态的3D自行车效果和视觉表格。",
 		card2:"一个以canvas元素为背景的网站，一个微互动的指针... 鼠标放在圆环上会改变颜色。",
-		card3:"react生态移动端编程键盘npm包",
+		card3:"用three.js开发的Webgl项目,点我! 😄",
 		intro:"你好，我是一名 \"准全栈 \"工程师，拥有丰富的前端设计和开发经验，并熟悉linux服务器的操作和部署。我喜欢设计和制造东西。",
 		location:"中国, 上海",
 		wechat:"微信 : Shade-233"
@@ -78,7 +78,7 @@ export default function App() {
 						<Card background="#224a54" color="white" title="Lingo Display" onClick={()=>window.open("https://shade233.top:4000","_blank")}>
 							<FormattedMessage id="card2" />
 						</Card>
-						<Card background="#1a1a1a" color="white" title="react-coding-keyboard" onClick={()=>window.open("https://github.com/Shade1996/react-coding-keyboard","_blank")}>
+						<Card background="#1a1a1a" color="white" title="Webgl pillars" onClick={()=>window.open("https://shade233.top:4002","_blank")}>
 						 	<FormattedMessage id="card3" />
 						</Card>
 					</div>
